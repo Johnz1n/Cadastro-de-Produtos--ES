@@ -22,10 +22,12 @@ public class teste {
      */
     public static void main(String[] args) throws Exception {
         // TODO code application logic here
-        Produto p = new Produto();
+        List<Produto> produto = new ArrayList<>();
         Scanner s = new Scanner(System.in);
-        
+        Produto aux = new Produto();
+        aux.ler();
         while(true){
+            Produto p = new Produto();
             System.out.println("Sair?(1-sim)");
             int sair = s.nextInt();
             if(sair == 1){
@@ -42,11 +44,12 @@ public class teste {
             System.out.println("Valor: ");
             p.setValor(s.nextInt());
             
-            p.incluir(p);
+            aux.incluir(p);
+            
             
         }
-        List<Produto> produto = new ArrayList<>();
-        produto = p.obterTodos();
+        
+        produto = aux.obterTodos();
         for(Produto m: produto){
             System.out.println(m.getCodigo());
             System.out.println(m.getNome());
@@ -55,6 +58,7 @@ public class teste {
             System.out.println(m.getValor());
             
         }
+        aux.salvar(produto);
     }
     
 }

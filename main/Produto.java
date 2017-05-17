@@ -5,6 +5,7 @@
  */
 package main;
 
+import java.io.Serializable;
 import java.util.Comparator;
 import java.util.Objects;
 
@@ -12,7 +13,7 @@ import java.util.Objects;
  *
  * @author João Pedro
  */
-public class Produto extends Produto_impl{
+public class Produto extends Produto_impl implements Serializable{
     private Integer codigo;
     private String nome;
     private String unindade;
