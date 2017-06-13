@@ -18,7 +18,7 @@ public class Produto extends Produto_impl implements Serializable{
     private String nome;
     private String unindade;
     private String tipo;
-    private Integer valor;
+    private Float valor;
 
     public Produto() {
     }
@@ -27,7 +27,7 @@ public class Produto extends Produto_impl implements Serializable{
         this.codigo = codigo;
     }
 
-    public Produto(Integer codigo, String nome, String unindade, String tipo, Integer valor) {
+    public Produto(Integer codigo, String nome, String unindade, String tipo, Float valor) {
         this.codigo = codigo;
         this.nome = nome;
         this.unindade = unindade;
@@ -67,11 +67,11 @@ public class Produto extends Produto_impl implements Serializable{
         this.tipo = tipo;
     }
 
-    public Integer getValor() {
+    public Float getValor() {
         return valor;
     }
 
-    public void setValor(Integer valor) {
+    public void setValor(Float valor) {
         this.valor = valor;
     }
 

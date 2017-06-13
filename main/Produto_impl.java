@@ -27,6 +27,10 @@ public class Produto_impl implements Serializable {
      List<Produto> produto = new ArrayList<>();
     
      public void incluir(Produto obj) throws Exception {
+        if(obj.getCodigo() < 0){
+            Exception ex = new Exception();
+            throw ex ;
+        }
         for(Produto p :produto){
             if(p.equals(obj)){
                 Exception ex = new Exception();
